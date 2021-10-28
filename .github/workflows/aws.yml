@@ -34,7 +34,7 @@ jobs:
           aws-region            : ${{ env.AWS_REGION_NAME}}
         
       - name: Deployment to s3 backet
-        run : aws s3 cp ${{ env.DEPLOY_PACKADGE }} s3://${{ env.BACKET_NAME }}  
+        run : aws s3 cp ${{ env.DEPLOY_PACKADGE }} s3://${{ env.BACKET_NAME }}/  
         
       - name: Happy Message CI
         run : echo "successfully"
