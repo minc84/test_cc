@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v1
         
       - name: Create zip deployment
-        run : zip -r ${{ env.EPLOY_PACKADGE }} ./ -x *.git*
+        run : zip -r ${{ env.DEPLOY_PACKADGE }} ./ -x *.git*
         
         
     
