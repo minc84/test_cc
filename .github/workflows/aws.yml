@@ -3,7 +3,7 @@ env:
   BACKET_NAME: "github-test-minc84"
   EB_APP     : "my-flask"
   EP_APP_ENV : "my-flask-env"
-  DEPLOY_PACKADGE : "flask_app_{{ github.sha }}.zip"
+  DEPLOY_PACKADGE : "flask_app_${{ github.sha }}.zip"
   AWS_REGION_NAME : "eu-north-1"
   
 
