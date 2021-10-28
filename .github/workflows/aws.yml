@@ -1,0 +1,17 @@
+name: aws-flask 
+
+on:
+  push:
+    branches:
+      - master
+      
+jobs:
+  my-cl-part:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: git clone repo
+        uses: actions/checkout@v1
+        
+        
+    
