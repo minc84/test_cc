@@ -55,7 +55,7 @@ jobs:
       - name: Creaie EB
         run : |
           aws elasticbeanstalk create-application-version \
-          --aplication-name ${{ env.EB_APP }} \
+          --application-name ${{ env.EB_APP }} \
           --source-bundle S3Bucket="${{ env.BACKET_NAME }}",s3key="${{ env.DEPLOY_PACKADGE }}" \
           --version-label "Ver-${{ github.sha }}" \
           --description "CommitSHA-${{ github.sha }}"
