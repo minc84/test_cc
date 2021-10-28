@@ -1,4 +1,13 @@
 name: aws-flask 
+env:
+  BACKET_NAME: "github-test-minc84"
+  EB_APP     : "my-flask"
+  EP_APP_ENV : "my-flask-env"
+  DEPLOY_PACKADGE : "flask_app_{{ github.sha }}.zip"
+  AWS_REGION_NAME : "eu-north-1"
+  
+
+
 
 on:
   push:
@@ -12,6 +21,9 @@ jobs:
     steps:
       - name: git clone repo
         uses: actions/checkout@v1
+        
+      - name: Create zip deployment
+        run : zip -r ${{ env.EPLOY_PACKADGE }} ./ -x *.git*
         
         
     
