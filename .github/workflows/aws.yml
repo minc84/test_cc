@@ -26,4 +26,15 @@ jobs:
         run : zip -r ${{ env.DEPLOY_PACKADGE }} ./ -x *.git*
         
         
-    
+      - name: Config my aws
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id     : ${{ secrets.MY_AWS_ACCESS_KEY }}
+          aws-secret-access-key : ${{ secrets.MY_AWS_SECRET_KEY }}
+          aws-region            : ${{ env.AWS_REGION_NAME}}
+        
+      - name: Deployment to s3 backet
+        run : aws s3 cp ${{ env.DEPLOY_PACKADGE }} s3://{{ env. BACKET_NAME }}/  
+        
+      - name: Happy Message
+        run : echo"successfully"
