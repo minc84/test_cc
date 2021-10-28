@@ -56,7 +56,7 @@ jobs:
         run : |
           aws elasticbeanstalk create-application-version \
           --application-name ${{ env.EB_APP }} \
-          --source-bundle S3Bucket="${{ env.BACKET_NAME }}",s3key="${{ env.DEPLOY_PACKADGE }}" \
+          --source-bundle S3Bucket="${{ env.BACKET_NAME }}",S3Key="${{ env.DEPLOY_PACKADGE }}" \
           --version-label "Ver-${{ github.sha }}" \
           --description "CommitSHA-${{ github.sha }}"
           
