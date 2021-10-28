@@ -37,4 +37,4 @@ jobs:
         run : aws s3 cp ${{ env.DEPLOY_PACKADGE }} s3://${{ env.BACKET_NAME }}/  
         
       - name: Happy Message
-        run : echo"successfully"
+        run : echo "successfully"
