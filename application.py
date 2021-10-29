@@ -9,4 +9,4 @@ def index():
 
 
 if __name__ == "__main__":
-	application.run(host="localhost", debug=True)
+	application.run(debug=True)
