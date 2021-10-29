@@ -1,12 +1,12 @@
 from flask import Flask, render_template
 
-application = Flask(__name__)
+app = Flask(__name__)
 
-@application.route("/")
+@app.route("/")
 def index():
 	return render_template('index.html')
 
 
 
 if __name__ == "__main__":
-	application.run(debug=True)
+	app.run(debug=True)
