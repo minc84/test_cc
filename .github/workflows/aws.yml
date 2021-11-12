@@ -1,6 +1,6 @@
 name: aws-flask 
 env:
-  BACKET_NAME: "github-test-minc84"
+  BACKET_NAME: "elasticbeanstalk-eu-north-1-800320899629"
   EB_APP     : "my-flask"
   EP_APP_ENV : "Myflask-env"
   DEPLOY_PACKADGE : "flask_app_${{ github.sha }}.zip"
